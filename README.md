@@ -13,8 +13,10 @@ El usuario debe ingresar los siguientes datos:
 
 
                             
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/Dolar%20oficial-blue.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Dolar%20oficial-blue.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/Variacion%20brecha-volatilidad.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/cotizacion%20dolar%20blue.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/cotizacion%20dolar%20oficial.png)
-![image]()
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20blue.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20oficial.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Eventos%20gobierno%20vs%20precio%20dolar.png)
