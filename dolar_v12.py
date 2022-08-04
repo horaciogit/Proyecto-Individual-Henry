@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split
 grado=2
 periodo=365
 
-
+'''
 urls={
       'usd_oficial' : 'https://api.estadisticasbcra.com/usd_of',
       'usd_blue' : 'https://api.estadisticasbcra.com/usd',
@@ -63,7 +63,9 @@ df_usd_blue.to_csv('usd_blue.csv',  index=False)
 df_milestones.to_csv('milestones.csv', index=False)
 df_CER.to_csv('CER.csv',  index=False)
 
+#FIN CONSULTA API
 
+'''
 
 usd_oficial= pd.read_csv('usd_oficial.csv')
 usd_blue= pd.read_csv('usd_blue.csv')
@@ -167,7 +169,7 @@ plt.show()
 
 #---------eventos gobierno-----
 dolars_1 = dolars_1.rename(columns={'e': 'Evento', 'v_x':'precio dolar oficial', 'v_y':'precio dolar blue' } )
-dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=True)
+dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=True, figsize=(8, 6))
 plt.savefig('images/Eventos gobierno vs precio dolar')
 plt.show()
 
