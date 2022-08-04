@@ -4,11 +4,11 @@ El programa consta de un unico script que descarga distintos  datasets del BCRA,
 Enlace de la página: https://estadisticasbcra.com/  
 Documentación: https://estadisticasbcra.com/api/documentacion
 
-El usuario debe ingresar los siguientes datos:
+<p>El usuario debe ingresar los siguientes datos:
 1- Período de tiempo en dias (default: 365)
 2- Grado de la regresion lineal=1, polinomica=2
 3- Fecha de prediccion futura (default: hoy)
-4 -Descargar datasets (obligatorio la primera vez) 
+4 -Descargar datasets (obligatorio la primera vez) </p>
 
 
 
@@ -20,3 +20,4 @@ El usuario debe ingresar los siguientes datos:
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20blue.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20oficial.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Eventos%20gobierno%20vs%20precio%20dolar.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/salida-consola.png)
