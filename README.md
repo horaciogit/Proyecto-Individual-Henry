@@ -5,16 +5,16 @@ Enlace de la página: https://estadisticasbcra.com/
 Documentación: https://estadisticasbcra.com/api/documentacion
 
 El usuario debe ingresar los siguientes datos:
-1- Período de tiempo en dias (default: 365)
-2- Grado de la regresion lineal=1, polinomica=2
-3- Fecha de prediccion futura (default: hoy)
-4 -Descargar datasets (obligatorio la primera vez) 
+1. Período de tiempo en dias (default: 365)
+2. Grado de la regresion lineal=1, polinomica=2
+3. Fecha de prediccion futura (default: hoy)
+4. Descargar datasets (obligatorio la primera vez) 
 
 
------- 
+
 fecha de máxima brecha: 2022-07-22 00:00:00, Variac. brecha %: 160.48
 cotizacion oficial: 129.76, cotizac. blue: 338.0
------- 
+ 
 
  Dia de la semana donde ocurren mayores variaciones de brecha: Wednesday
 
