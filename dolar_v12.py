@@ -169,7 +169,7 @@ plt.show()
 
 #---------eventos gobierno-----
 dolars_1 = dolars_1.rename(columns={'e': 'Evento', 'v_x':'precio dolar oficial', 'v_y':'precio dolar blue' } )
-dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=True, figsize=(8, 6))
+dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=True, figsize=(18, 10))
 plt.savefig('images/Eventos gobierno vs precio dolar')
 plt.show()
 
@@ -207,7 +207,7 @@ def regressor_plots(money):
     R2_full_error= r2_score(y, y_pred)
     
     #-----graficos------------
-    figure(figsize=(8, 6), dpi=80)
+    figure(figsize=(18, 12), dpi=80)
     plt.title('regresion lineal' + title)
     
     r2err_train = 'r2  train=' + str(round (R2_train_error, 4))
