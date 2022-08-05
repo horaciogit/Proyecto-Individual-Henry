@@ -10,13 +10,13 @@ Se pueden configurar las siguientes variables:
 3. Fecha de prediccion futura 
 
 
-![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Screenshot%20consola%202022-08-05.png)                            
-![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Dolar%20oficial-blue.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/Variacion%20brecha-volatilidad.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/cotizacion%20dolar%20blue.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/images/cotizacion%20dolar%20oficial.png)
-![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20blue.png)
-![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/regresion%20lineal%20dolar%20oficial.png)
-![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Eventos%20gobierno%20vs%20precio%20dolar.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Screenshot%20consola.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Dolar%20oficial-blue.png)
+![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/Variacion%20brecha-volatilidad.png)
+![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/cotizacion%20dolar%20blue.png)
+![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/cotizacion%20dolar%20oficial.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/regresion%20lineal%20dolar%20blue.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/regresion%20lineal%20dolar%20oficial.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Eventos%20gobierno%20vs%20precio%20dolar.png)
 
 
