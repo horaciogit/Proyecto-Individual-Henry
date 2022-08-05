@@ -1,7 +1,7 @@
 #proyecto 1
 import pandas as pd
 import numpy as np
-import talib as ta
+import talib as ta                # !pip install talib-binary
 import matplotlib.pylab as plt
 from matplotlib.pyplot import figure
 import sys
@@ -13,12 +13,13 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.model_selection import train_test_split
 
-
+#editar variables globales
+#grado  1-regresion lineal  2-polinomica,  periodo en dias, fecha formato YY-MM-DD
 grado=2
 periodo=365
 inputfecha= '2022-9-30'
 
-'''
+
 urls={
       'usd_oficial' : 'https://api.estadisticasbcra.com/usd_of',
       'usd_blue' : 'https://api.estadisticasbcra.com/usd',
@@ -63,7 +64,7 @@ df_usd_oficial.to_csv('usd_oficial.csv', index=False)
 df_usd_blue.to_csv('usd_blue.csv',  index=False)
 df_milestones.to_csv('milestones.csv', index=False)
 df_CER.to_csv('CER.csv',  index=False)
-'''
+
 #FIN CONSULTA API
 
 
@@ -157,7 +158,7 @@ ax.grid(True)
 
 ax.tick_params( labelrotation=45)
 ax.legend(loc='upper center', fontsize='x-large');
-plt.savefig('images/Dolar oficial-blue.png')
+plt.savefig('Dolar oficial-blue.png')
 plt.show()
 
 #--- grafico  brecha volatilidad
@@ -176,13 +177,13 @@ ax1.grid(True)
 
 ax1.tick_params( labelrotation=45)
 ax1.legend(loc='upper center', fontsize='x-large');
-plt.savefig('images/Variacion brecha-volatilidad.png')
+plt.savefig('Variacion brecha-volatilidad.png')
 plt.show()
 
 #---------eventos gobierno-----
 dolars_1 = dolars_1.rename(columns={'e': 'Evento', 'v_x':'precio dolar oficial', 'v_y':'precio dolar blue' } )
-dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=True, figsize=(18, 10))
-plt.savefig('images/Eventos gobierno vs precio dolar')
+dolars_1.plot(kind = 'bar', x = 'Evento', y=['precio dolar oficial', 'precio dolar blue'  ], logy=False, figsize=(18, 10))
+plt.savefig('Eventos gobierno vs precio dolar')
 plt.show()
 
 
@@ -234,7 +235,7 @@ def regressor_plots(money):
     plt.scatter(X_train, y_train, label='train')
     plt.scatter(X_train, y_train_pred, color='red')
     
-    plt.savefig('images/regresion lineal ' + title)
+    plt.savefig('regresion lineal ' + title)
     plt.show()
     
     
@@ -252,7 +253,7 @@ def regressor_plots(money):
     
     ax.tick_params( labelrotation=45)
     ax.legend(loc='upper center', fontsize='x-large');
-    plt.savefig('images/cotizacion ' +title)
+    plt.savefig('cotizacion ' +title)
     plt.show()
     
     

@@ -7,7 +7,7 @@ Documentación: https://estadisticasbcra.com/api/documentacion
 Se pueden configurar las siguientes variables:
 1. Período de tiempo en dias (default: 365)
 2. Grado de la regresion lineal=1, polinomica=2
-3. Fecha de prediccion futura (default: hoy)
+3. Fecha de prediccion futura 
 
 
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Screenshot%20consola%202022-08-05.png)                            
