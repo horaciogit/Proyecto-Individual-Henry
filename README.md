@@ -12,9 +12,9 @@ Se pueden configurar las siguientes variables:
 
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Screenshot%20consola.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Dolar%20oficial-blue.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/Variacion%20brecha-volatilidad.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/cotizacion%20dolar%20blue.png)
-![image](https://github.com/horaciogit/Proyecto-Individual/blob/main/cotizacion%20dolar%20oficial.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Variacion%20brecha-volatilidad.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/cotizacion%20dolar%20oficial.png)
+![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/cotizacion%20dolar%20blue.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/regresion%20lineal%20dolar%20blue.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/regresion%20lineal%20dolar%20oficial.png)
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/Eventos%20gobierno%20vs%20precio%20dolar.png)
