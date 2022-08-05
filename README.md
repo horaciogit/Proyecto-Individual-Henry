@@ -1,14 +1,13 @@
-El programa consta de un unico script que descarga distintos  datasets del BCRA, los guarda en formato csv y obtiene diversos analisis finacieros y gráficos, se actualiza en cada ejecución
+El programa consta de un unico script que descarga distintos  datasets estadísticos del BCRA, los guarda en formato csv y obtiene diversos analisis finacieros y gráficos, se actualiza en cada ejecución
 
  API BCRA
 Enlace de la página: https://estadisticasbcra.com/  
 Documentación: https://estadisticasbcra.com/api/documentacion
 
-El usuario debe ingresar los siguientes datos:
+Se pueden configurar las siguientes variables:
 1. Período de tiempo en dias (default: 365)
 2. Grado de la regresion lineal=1, polinomica=2
 3. Fecha de prediccion futura (default: hoy)
-4. Descargar datasets (obligatorio la primera vez) 
 
 
 ![image](https://github.com/horaciogit/Proyecto-Individual-Henry/blob/main/images/Screenshot%20consola%202022-08-05.png)                            
