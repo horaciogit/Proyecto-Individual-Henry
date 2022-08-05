@@ -16,6 +16,7 @@ from sklearn.model_selection import train_test_split
 
 grado=2
 periodo=365
+inputfecha= '2022-9-30'
 
 '''
 urls={
@@ -62,10 +63,10 @@ df_usd_oficial.to_csv('usd_oficial.csv', index=False)
 df_usd_blue.to_csv('usd_blue.csv',  index=False)
 df_milestones.to_csv('milestones.csv', index=False)
 df_CER.to_csv('CER.csv',  index=False)
-
+'''
 #FIN CONSULTA API
 
-'''
+
 
 usd_oficial= pd.read_csv('usd_oficial.csv')
 usd_blue= pd.read_csv('usd_blue.csv')
@@ -76,13 +77,9 @@ CER = pd.read_csv('CER.csv')
 dolars=  pd.merge(usd_oficial, usd_blue, on='d')
 dolars_1 = pd.merge(dolars, milestones, on='d'  )
 
-
-
 dolars['d'] = pd.to_datetime(dolars['d'], format='%Y-%m-%d')
 dolars= dolars[dolars.d > datetime.now() - timedelta(days=periodo) ]
 dolars.reset_index(inplace=True, drop=True)
-
-
 
 dolars['VarBrecha'] = dolars.apply(lambda x:( x['v_y'] / x['v_x'] -1 )*100 , axis=1)
 
@@ -128,17 +125,32 @@ df_2 = df_2.rename(columns={'d': 'Fecha', 'v_x':' Dolar oficial', 'v_y':'Dolar b
 df_2.reset_index(drop=True, inplace=True)
 print(f' 5 dias maxima volatilidad:\n{ df_2} \n'   )
 
+#------------agregar CER
+CER['d'] = pd.to_datetime(CER['d'], format='%Y-%m-%d')
+CER= CER[CER.d > datetime.now() - timedelta(days=periodo) ]
+
+dolarsCER = pd.merge(dolars, CER, on= 'd')
+
+#---------datos relevantes----
+print('Ultimos datos relevantes:')
+print(f'  Ultimo precio dolar oficial fecha {dolarsCER.iloc[-1, 0]} : ${dolarsCER.iloc[-1, 1] }')
+print(f'  Ultimo precio dolar oficial fecha {dolarsCER.iloc[-1, 0]} : ${dolarsCER.iloc[-1, 2] }')
+inflacion_periodo= (dolarsCER.iloc[-1, 9]/dolarsCER.iloc[0, 9]-1)*100
+print(f'  Inflación acumulada periodo {periodo} dias: {round(inflacion_periodo,2)} %')
+print('')
+
 #----------------graficas
 
 fig, ax = plt.subplots(figsize=(20, 10))
 
 ax.set_xlabel('fecha',   fontsize=16)
-ax.set_ylabel('cotizacion ', fontsize=16)
-ax.set_title('Dolar oficial - dolar blue ',  fontsize=14, fontweight='bold')
+ax.set_ylabel('cotizacion pesos ARS ', fontsize=16)
+ax.set_title('Dolar oficial - dolar blue - CER',  fontsize=14, fontweight='bold')
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 ax.xaxis.set_major_locator(mdates.DayLocator(interval=15)) 
-ax.scatter(dates,  dolars.v_x,     label='dolar oficial', linewidth=2 )
-ax.plot(dates, dolars.v_y, label='dolar blue', color='red')
+ax.scatter(dates,  dolars.v_x,     label='dolar oficial $', linewidth=2 )
+ax.plot(dates, dolars.v_y, label='dolar blue $', color='red')
+ax.plot(dates, dolarsCER.v, label= 'CER', color='magenta'  )
 ax.plot(dates, dolars.SMA,  label='media movil blue', color='green'  )
 
 ax.grid(True)
@@ -254,6 +266,15 @@ def regressor_plots(money):
     print( f' prediccion 6 meses: {predict_6meses}')                
     print( f' prediccion 12 meses: {predict_12meses}')
     print()
+    
+    inputfecha_2 = datetime.strptime(inputfecha, '%Y-%m-%d')
+    dias = (inputfecha_2 - dolars.iloc[0, 7]).days
+    dias_mercado= int(dias/7*5)
+
+    valor_pred = lr2.predict (pr.fit_transform([[dias_mercado]]))[0]  
+    
+    print(f' valor calculado para {inputfecha} {money}: $ {int(valor_pred)} \n')
+    
    
     
     return
