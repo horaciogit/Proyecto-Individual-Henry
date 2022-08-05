@@ -148,9 +148,9 @@ ax.set_ylabel('cotizacion pesos ARS ', fontsize=16)
 ax.set_title('Dolar oficial - dolar blue - CER',  fontsize=14, fontweight='bold')
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 ax.xaxis.set_major_locator(mdates.DayLocator(interval=15)) 
-ax.scatter(dates,  dolars.v_x,     label='dolar oficial $', linewidth=2 )
+ax.plot(dates,  dolars.v_x,     label='dolar oficial $', linewidth=2 )
 ax.plot(dates, dolars.v_y, label='dolar blue $', color='red')
-ax.plot(dates, dolarsCER.v, label= 'CER', color='magenta'  )
+ax.plot(dates, dolarsCER.v, label= 'CER', color='black' , linewidth=2 )
 ax.plot(dates, dolars.SMA,  label='media movil blue', color='green'  )
 
 ax.grid(True)
@@ -192,10 +192,13 @@ def regressor_plots(money):
     if money == 'oficial':
         y= dolars.v_x.values      #dolar oficial
         #grado=2
+        pltText1=115
+        pltText2=120
         title='dolar oficial'
     elif money == 'blue':
         y= dolars.v_y.values   #dolar blue
-        #grado=2
+        pltText1=280
+        pltText2=290
         title='dolar blue'
     else : return None    
         
@@ -219,15 +222,15 @@ def regressor_plots(money):
     R2_full_error= r2_score(y, y_pred)
     
     #-----graficos------------
-    figure(figsize=(18, 12), dpi=80)
-    plt.title('regresion lineal' + title)
+    figure(figsize=(16, 8), dpi=80)
+    plt.title('regresion lineal' + title, fontsize=18)
     
     r2err_train = 'r2  train=' + str(round (R2_train_error, 4))
     r2err_test = 'r2_test = ' + str(round (R2_test_error, 4))
-    plt.text(0, 125,  r2err_train)
-    plt.text(0, 135,  r2err_test)
-    plt.xlabel("ruedas mercado")
-    plt.ylabel("cotizacion en pesos")
+    plt.text(0, pltText1,  r2err_train, fontsize=16)
+    plt.text(0, pltText2,  r2err_test, fontsize=16)
+    plt.xlabel("ruedas mercado", fontsize=16)
+    plt.ylabel("cotizacion en pesos", fontsize=16)
     plt.scatter(X_train, y_train, label='train')
     plt.scatter(X_train, y_train_pred, color='red')
     
@@ -236,11 +239,11 @@ def regressor_plots(money):
     
     
     
-    fig, ax = plt.subplots(figsize=(20, 10))
+    fig, ax = plt.subplots(figsize=(16, 8))
     
     ax.set_xlabel('fecha',   fontsize=16)
     ax.set_ylabel('cotizacion ', fontsize=16)
-    ax.set_title('serie tiempo '+ title,  fontsize=14, fontweight='bold')
+    ax.set_title('serie tiempo '+ title,  fontsize=16, fontweight='bold')
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
     ax.xaxis.set_major_locator(mdates.DayLocator(interval=15)) 
     ax.scatter(dates,  y,     label='real', linewidth=2 )
