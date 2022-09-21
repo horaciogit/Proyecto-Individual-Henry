@@ -1,4 +1,6 @@
 ﻿El programa consta de un unico script que descarga distintos  datasets estadísticos del BCRA, los guarda en formato csv y obtiene diversos analisis finacieros y gráficos, se actualiza en cada ejecución
+ 
+Planteo del desafio: https://github.com/horaciogit/DS-PI-ProyectoIndividual/blob/main/PI1_DATA02.md 
 
  API BCRA
 Enlace de la página: https://estadisticasbcra.com/  
